@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- ============================================================
+       PORTFOLIO — Replace "Priyanka Bhanvase" with your name below
+       ============================================================ -->
+  <title>Priyanka Bhanvase | Developer Portfolio</title>
+
+  <!-- Google Fonts: Poppins (as required) -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Phosphor Icons (free, lightweight) -->
+  <script src="https://unpkg.com/@phosphor-icons/web@2.1.1/src/index.js" defer></script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       NAVIGATION BAR
+       - Fixed top, collapses to hamburger on mobile
+       - Active link highlighted via JS on scroll
+       ============================================================ -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+
+      <!-- REPLACE: Change "AM" to your initials -->
+      <a href="#hero" class="nav-brand" aria-label="Home">
+        <span class="brand-letters">PB</span>
+        <span class="brand-dot" aria-hidden="true">.</span>
+      </a>
+
+      <!-- Desktop nav links -->
+      <ul class="nav-menu" id="navMenu" role="list">
+        <li><a href="#about"  class="nav-link" data-section="about">About</a></li>
+        <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
+        <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+        <li><a href="#resume" class="nav-link" data-section="resume">Resume</a></li>
+        <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+      </ul>
+
+      <!-- Mobile hamburger toggle -->
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="navMenu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ============================================================
+         SECTION 1 — HERO
+         Typing effect, profile avatar, two CTA buttons
+         ============================================================ -->
+    <section class="hero" id="hero" aria-label="Introduction">
+
+      <!-- Ambient background shapes -->
+      <div class="hero-bg" aria-hidden="true">
+        <div class="bg-orb bg-orb--1"></div>
+        <div class="bg-orb bg-orb--2"></div>
+        <div class="bg-grid"></div>
+      </div>
+
+      <div class="hero-content container">
+
+        <!-- Left: Text -->
+        <div class="hero-text reveal">
+          <p class="hero-greeting">Hello, I'm</p>
+
+          <!-- REPLACE: Change this to your full name -->
+          <h1 class="hero-name">Priyanka <span class="accent">Bhanvase</span></h1>
+
+          <!-- Typing effect — roles are defined in script.js -->
+          <p class="hero-role">
+            A <span class="typing-text" id="typingText" aria-live="polite"></span><span class="typing-cursor" aria-hidden="true">|</span>
+          </p>
+
+          <!-- REPLACE: Your short tagline -->
+          <p class="hero-bio">
+            Passionate Computer Science student building responsive websites and interactive web applications using HTML, CSS, JavaScript, and modern web technologies.
+          </p>
+
+          <div class="hero-cta">
+            <!-- REPLACE: href="./assets/resume.pdf" with path to your resume file -->
+            <a href="./assets/Resume.pdf" class="btn btn--primary" download aria-label="Download Resume PDF">
+              <i class="ph ph-download-simple" aria-hidden="true"></i> Download Resume
+            </a>
+            <a href="#contact" class="btn btn--outline">
+              <i class="ph ph-chat-circle-text" aria-hidden="true"></i> Contact Me
+            </a>
+          </div>
+
+          <!-- Social quick-links in hero -->
+          <div class="hero-socials" aria-label="Social media links">
+            <!-- REPLACE: Update all href values with your profiles -->
+            <a href="https://github.com/priyankabhanvase3001"    target="_blank" rel="noopener noreferrer" aria-label="GitHub profile"><i class="ph ph-github-logo"></i></a>
+            <a href="https://www.linkedin.com/in/priyanka-bhanvase-076608340"  target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile"><i class="ph ph-linkedin-logo"></i></a>
+      
+          </div>
+        </div>
+
+        <!-- Right: Avatar -->
+      <div class="hero-avatar reveal reveal--delay-2"> 
+        <div class="avatar-frame">
+           <!-- REPLACE: src="./assets/profile.jpg" with your photo. If no photo, the fallback initials block below will show --> 
+          <!-- <div class="avatar-initials" aria-label="Profile avatar">PB</div> -->
+           <!-- Uncomment and replace src when you have a photo:--> 
+            <!-- <img src="Priyanka.jpeg" alt="Priyanka Bhanvase — profile photo" class="avatar-img" /> -->
+            <img src="Priyanka.jpeg"
+     alt="Priyanka Bhanvase"
+     class="avatar-img">
+
+     
+        </div>
+      </div> 
+      <!-- Floating status badge --> 
+  <div class="avatar-badge" aria-label="Availability status">
+    <span class="badge-dot" aria-hidden="true"></span>
+    Available for hire
+  </div>
+</div>
+      </div>
+
+      <!-- Scroll indicator -->
+      <a href="#about" class="scroll-hint" aria-label="Scroll to About section">
+        <span class="scroll-hint__text">Scroll</span>
+        <span class="scroll-hint__arrow" aria-hidden="true"></span>
+      </a>
+    </section>
+
+
+    <!-- ============================================================
+         SECTION 2 — ABOUT ME
+         Bio, education, career objective, interests
+         ============================================================ -->
+    <section class="section about" id="about" aria-label="About Me">
+      <div class="container">
+
+        <header class="section-header reveal">
+          <p class="section-label">Get to know me</p>
+          <h2 class="section-title">About <span class="accent">Me</span></h2>
+        </header>
+
+        <div class="about-grid">
+
+          <!-- Bio text -->
+          <div class="about-text reveal">
+            <!-- REPLACE: Update this paragraph with your own bio -->
+            <p>
+              I am a Computer Engineering student passionate about web development and software engineering. I enjoy building responsive websites, interactive user interfaces, and learning modern technologies.
+            </p>
+            <p>
+              I have built projects including a Personal Portfolio Website, AI chatbot, Landing Page, Calculator,Quiz Maker and Image Gallery using HTML, CSS, and JavaScript. I am continuously improving my frontend and programming skills.
+</p>
+
+            <!-- Quick info pills -->
+            <ul class="about-meta" aria-label="Quick facts">
+              <!-- REPLACE: Update each item with your own details -->
+              <li><i class="ph ph-map-pin" aria-hidden="true"></i> Baramati, Maharashtra</li>
+              <li><i class="ph ph-graduation-cap" aria-hidden="true"></i> B.Tech Computer Engineering, 2028</li>
+              <li><i class="ph ph-envelope-simple" aria-hidden="true"></i> priyankabhanvase3001@gmail.com</li>
+              <li><i class="ph ph-briefcase" aria-hidden="true"></i> Open to opportunities</li>
+            </ul>
+          </div>
+
+          <!-- About cards: Education + Objective + Interests -->
+          <div class="about-cards">
+
+            <article class="glass-card about-card reveal reveal--delay-1" aria-label="Education">
+              <div class="about-card__icon"><i class="ph ph-student" aria-hidden="true"></i></div>
+              <div>
+                <h3>Education</h3>
+                <!-- REPLACE: Your degree / university -->
+                <p><strong>B.Tech Computer Engineering</strong><br />Savitribai Phule Pune University, Maharashtra 2024–2028</p>
+                <p class="about-card__note">CGPA 9.36 / 10.0 </p>
+              </div>
+            </article>
+
+            <article class="glass-card about-card reveal reveal--delay-2" aria-label="Career Objective">
+              <div class="about-card__icon"><i class="ph ph-target" aria-hidden="true"></i></div>
+              <div>
+                <h3>Career Objective</h3>
+                <!-- REPLACE: Your goal -->
+                <p>
+                To obtain an internship or entry-level software development position where I can apply my technical skills, gain practical experience, and contribute to innovative projects.</p>
+              </div>
+            </article>
+
+            <article class="glass-card about-card reveal reveal--delay-3" aria-label="Personal Interests">
+              <div class="about-card__icon"><i class="ph ph-sparkle" aria-hidden="true"></i></div>
+              <div>
+                <h3>Interests</h3>
+                <!-- REPLACE: Your interests -->
+                <div class="interest-tags" aria-label="Interest tags">
+                  <span>Web Development</span><span>Problem Solving</span>
+                  <span>UI/UX Design</span><span>Artificial Intelligence</span>
+                  <span>Coding</span>
+                </div>
+              </div>
+            </article>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         SECTION 3 — SKILLS
+         Glassmorphism cards + animated progress bars
+         ============================================================ -->
+    <section class="section skills" id="skills" aria-label="Technical Skills">
+      <div class="container">
+
+        <header class="section-header reveal">
+          <p class="section-label">What I work with</p>
+          <h2 class="section-title">Technical <span class="accent">Skills</span></h2>
+        </header>
+
+        <!-- Progress bar skills -->
+        <div class="skills-bars reveal">
+          <!-- Each skill: data-level = percentage width (animated by JS) -->
+          <div class="skill-bar-item">
+            <div class="skill-bar-label">
+              <span>HTML5</span><span class="skill-pct">90%</span>
+            </div>
+            <div class="skill-bar-track" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" aria-label="HTML5 skill level">
+              <div class="skill-bar-fill" data-level="90"></div>
+            </div>
+          </div>
+
+          <div class="skill-bar-item">
+            <div class="skill-bar-label">
+              <span>CSS3 &amp; Sass</span><span class="skill-pct">85%</span>
+            </div>
+            <div class="skill-bar-track" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" aria-label="CSS3 skill level">
+              <div class="skill-bar-fill" data-level="85"></div>
+            </div>
+          </div>
+
+          <div class="skill-bar-item">
+            <div class="skill-bar-label">
+              <span>JavaScript (ES6+)</span><span class="skill-pct">75%</span>
+            </div>
+            <div class="skill-bar-track" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" aria-label="JavaScript skill level">
+              <div class="skill-bar-fill" data-level="75"></div>
+            </div>
+          </div>
+
+          <div class="skill-bar-item">
+            <div class="skill-bar-label">
+              <span>Git &amp; GitHub</span><span class="skill-pct">75%</span>
+            </div>
+            <div class="skill-bar-track" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" aria-label="Git skill level">
+              <div class="skill-bar-fill" data-level="75"></div>
+            </div>
+          </div>
+
+          <div class="skill-bar-item">
+            <div class="skill-bar-label">
+              <span>Python</span><span class="skill-pct">70%</span>
+            </div>
+            <div class="skill-bar-track" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" aria-label="Responsive Design skill level">
+              <div class="skill-bar-fill" data-level="70"></div>
+            </div>
+          </div>
+
+          <div class="skill-bar-item">
+            <div class="skill-bar-label">
+              <span>UI/UX Basics</span><span class="skill-pct">70%</span>
+            </div>
+            <div class="skill-bar-track" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" aria-label="UI/UX skill level">
+              <div class="skill-bar-fill" data-level="70"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skill category cards -->
+        <div class="skills-cards">
+
+          <article class="glass-card skill-card reveal" aria-label="Frontend skills">
+            <div class="skill-card__icon skill-card__icon--blue">
+              <i class="ph ph-monitor" aria-hidden="true"></i>
+            </div>
+            <h3>Frontend</h3>
+            <ul class="skill-tag-list" aria-label="Frontend technologies">
+              <li>HTML5</li><li>CSS3</li><li>JavaScript</li>
+              <li>Responsive Design</li><li>CSS Grid</li>
+            </ul>
+          </article>
+
+          <article class="glass-card skill-card reveal reveal--delay-1" aria-label="Tools skills">
+            <div class="skill-card__icon skill-card__icon--amber">
+              <i class="ph ph-wrench" aria-hidden="true"></i>
+            </div>
+            <h3>Tools &amp; Workflow</h3>
+            <ul class="skill-tag-list" aria-label="Tools">
+              <li>Git</li><li>GitHub</li><li>VS Code</li>
+              
+            </ul>
+          </article>
+
+          <article class="glass-card skill-card reveal reveal--delay-2" aria-label="Design skills">
+            <div class="skill-card__icon skill-card__icon--green">
+              <i class="ph ph-paint-brush" aria-hidden="true"></i>
+            </div>
+            <h3>Design</h3>
+            <ul class="skill-tag-list" aria-label="Design skills">
+              <li>UI/UX Basics</li>
+              <li>Accessibility</li>
+            </ul>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         SECTION 4 — PROJECTS
+         Filter tabs + project cards with live/GitHub links
+         ============================================================ -->
+    <section class="section projects" id="projects" aria-label="Projects">
+      <div class="container">
+
+        <header class="section-header reveal">
+          <p class="section-label">Things I've built</p>
+          <h2 class="section-title">Featured <span class="accent">Projects</span></h2>
+        </header>
+
+        <!-- Filter buttons — JS handles show/hide -->
+        <div class="project-filters reveal" role="tablist" aria-label="Filter projects by category">
+          <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All</button>
+          <button class="filter-btn" data-filter="frontend" role="tab" aria-selected="false">Frontend</button>
+          <button class="filter-btn" data-filter="javascript" role="tab" aria-selected="false">JavaScript</button>
+          <button class="filter-btn" data-filter="ai" role="tab" aria-selected="false">AI / API</button>
+        </div>
+
+        <!-- Project cards grid -->
+        <div class="projects-grid" id="projectsGrid">
+
+          <!-- PROJECT 1: Calculator App -->
+          <article class="glass-card project-card reveal" data-category="javascript" aria-label="Calculator App project">
+            <div class="project-img project-img--calc" role="img" aria-label="Calculator App preview">
+              <div class="project-img-overlay" aria-hidden="true">
+                <i class="ph ph-calculator"></i>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="project-badge">JavaScript</span>
+                <span class="project-badge">CSS Grid</span>
+              </div>
+              <h3>Calculator App</h3>
+              <p>A fully functional calculator supporting arithmetic operations, keyboard input, and a clean dark UI built with vanilla JavaScript and CSS Grid.</p>
+              <div class="project-links">
+                <!-- REPLACE: href with your live demo URL -->
+                <a href="#" class="btn btn--small btn--primary" target="_blank" rel="noopener noreferrer" aria-label="Live demo of Calculator App">
+                  <i class="ph ph-arrow-square-out" aria-hidden="true"></i> Live Demo
+                </a>
+                <!-- REPLACE: href with your GitHub repo URL -->
+                <a href="#" class="btn btn--small btn--outline" target="_blank" rel="noopener noreferrer" aria-label="GitHub repository for Calculator App">
+                  <i class="ph ph-github-logo" aria-hidden="true"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 2: Image Gallery -->
+          <article class="glass-card project-card reveal reveal--delay-1" data-category="frontend" aria-label="Image Gallery project">
+            <div class="project-img project-img--gallery" role="img" aria-label="Image Gallery preview">
+              <div class="project-img-overlay" aria-hidden="true">
+                <i class="ph ph-images"></i>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="project-badge">HTML</span>
+                <span class="project-badge">CSS</span>
+                <span class="project-badge">Lightbox</span>
+              </div>
+              <h3>Image Gallery</h3>
+              <p>A responsive masonry photo gallery with lightbox, category filters, and smooth hover animations. Supports lazy loading for performance.</p>
+              <div class="project-links">
+                <a href="#" class="btn btn--small btn--primary" target="_blank" rel="noopener noreferrer" aria-label="Live demo of Image Gallery">
+                  <i class="ph ph-arrow-square-out" aria-hidden="true"></i> Live Demo
+                </a>
+                <a href="#" class="btn btn--small btn--outline" target="_blank" rel="noopener noreferrer" aria-label="GitHub repository for Image Gallery">
+                  <i class="ph ph-github-logo" aria-hidden="true"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 3: AI Chatbot -->
+          <article class="glass-card project-card reveal reveal--delay-2" data-category="ai" aria-label="AI Chatbot project">
+            <div class="project-img project-img--chat" role="img" aria-label="AI Chatbot preview">
+              <div class="project-img-overlay" aria-hidden="true">
+                <i class="ph ph-robot"></i>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="project-badge">JavaScript</span>
+                <span class="project-badge">OpenAI API</span>
+              </div>
+              <h3>AI Chatbot</h3>
+              <p>A conversational chatbot powered by the OpenAI API. Features message history, streaming responses, and a polished chat-bubble UI.</p>
+              <div class="project-links">
+                
+                <a href="https://gemini-ai-assistant-dusky.vercel.app"class="btn btn--small btn--primary" target="_blank" rel="noopener noreferrer"><i class="ph ph-arrow-square-out"></i>Live Demo
+                </a>
+                <a href="#" class="btn btn--small btn--outline" target="_blank" rel="noopener noreferrer" aria-label="GitHub repository for Image Gallery">
+                  <i class="ph ph-github-logo" aria-hidden="true"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </article>
+
+          
+          <!-- PROJECT 4: Portfolio Website -->
+          <article class="glass-card project-card reveal" data-category="frontend" aria-label="Portfolio Website project">
+            <div class="project-img project-img--portfolio" role="img" aria-label="Portfolio Website preview">
+              <div class="project-img-overlay" aria-hidden="true">
+                <i class="ph ph-layout"></i>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="project-badge">HTML</span>
+                <span class="project-badge">CSS</span>
+                <span class="project-badge">JavaScript</span>
+              </div>
+              <h3>Portfolio Website</h3>
+              <p>This very portfolio — built from scratch with semantic HTML5, custom CSS animations, and vanilla JS. Fully responsive, zero frameworks.</p>
+              <div class="project-links">
+                <a href="#" class="btn btn--small btn--primary" target="_blank" rel="noopener noreferrer" aria-label="Live demo of Portfolio Website">
+                  <i class="ph ph-arrow-square-out" aria-hidden="true"></i> Live Demo
+                </a>
+                <a href="#" class="btn btn--small btn--outline" target="_blank" rel="noopener noreferrer" aria-label="GitHub repository for Portfolio Website">
+                  <i class="ph ph-github-logo" aria-hidden="true"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Medical Diagnosis Project -->
+<article class="glass-card project-card reveal" data-category="ai" aria-label="Medical Diagnosis project">
+  <div class="project-img" style="background: linear-gradient(135deg, #0d3d2a, #0d6e4f);" role="img" aria-label="Medical Diagnosis preview">
+    <div class="project-img-overlay" aria-hidden="true">
+      <i class="ph ph-heartbeat"></i>
+    </div>
+  </div>
+  <div class="project-body">
+    <div class="project-meta">
+      <span class="project-badge">Python</span>
+      <span class="project-badge">Machine Learning</span>
+      <span class="project-badge">Flask</span>
+    </div>
+    <h3>Medical Diagnosis</h3>
+    <p>An AI-powered medical diagnosis tool that predicts diseases based on symptoms using machine learning models. Features an intuitive interface for symptom input and real-time predictions.</p>
+    <div class="project-links">
+      <a href="#" class="btn btn--small btn--primary" target="_blank" rel="noopener noreferrer" aria-label="Live demo of Medical Diagnosis">
+        <i class="ph ph-arrow-square-out" aria-hidden="true"></i> Live Demo
+      </a>
+      <a href="#" class="btn btn--small btn--outline" target="_blank" rel="noopener noreferrer" aria-label="GitHub repository for Medical Diagnosis">
+        <i class="ph ph-github-logo" aria-hidden="true"></i> GitHub
+      </a>
+    </div>
+  </div>
+</article>
+
+<!-- Quiz Maker Project -->
+<article class="glass-card project-card reveal" data-category="frontend" aria-label="Quiz Maker project">
+  <div class="project-img" style="background: linear-gradient(135deg, #1e0a3c, #5c2d91);" role="img" aria-label="Quiz Maker preview">
+    <div class="project-img-overlay" aria-hidden="true">
+      <i class="ph ph-question"></i>
+    </div>
+  </div>
+  <div class="project-body">
+    <div class="project-meta">
+      <span class="project-badge">JavaScript</span>
+      <span class="project-badge">HTML</span>
+      <span class="project-badge">CSS</span>
+    </div>
+    <h3>Quiz Maker</h3>
+    <p>A dynamic quiz creation and management platform where users can create custom quizzes, set timers, and track scores. Supports multiple question types with instant result feedback.</p>
+    <div class="project-links">
+      <a href="#" class="btn btn--small btn--primary" target="_blank" rel="noopener noreferrer" aria-label="Live demo of Quiz Maker">
+        <i class="ph ph-arrow-square-out" aria-hidden="true"></i> Live Demo
+      </a>
+      <a href="#" class="btn btn--small btn--outline" target="_blank" rel="noopener noreferrer" aria-label="GitHub repository for Quiz Maker">
+        <i class="ph ph-github-logo" aria-hidden="true"></i> GitHub
+      </a>
+    </div>
+  </div>
+</article>
+
+        </div><!-- /projects-grid -->
+
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         SECTION 5 — RESUME
+         Preview card + timeline + download button
+         ============================================================ -->
+    <section class="section resume" id="resume" aria-label="Resume">
+      <div class="container">
+
+        <header class="section-header reveal">
+          <p class="section-label">My background</p>
+          <h2 class="section-title">Resume &amp; <span class="accent">Timeline</span></h2>
+        </header>
+
+        <div class="resume-grid">
+
+          <!-- Resume preview card -->
+          <aside class="glass-card resume-card reveal" aria-label="Resume download">
+            <a href="./assets/Resume.pdf" target="_blank" aria-label="View Resume PDF" style="display:block; cursor:pointer;">
+              <div class="resume-card__preview" role="img" aria-label="Resume preview">
+                <i class="ph ph-file-text" aria-hidden="true"></i>
+                <p>Priyanka Bhanvase</p>
+                <span>Aspiring Software Engineer</span>
+              </div>
+            </a>
+            <!-- REPLACE: Update href with your actual resume file path -->
+            <a href="./assets/Resume.pdf" class="btn btn--primary" download aria-label="Download resume as PDF">
+              <i class="ph ph-download-simple" aria-hidden="true"></i> Download PDF
+            </a>
+            <!-- <p class="resume-card__updated">Last updated: June 2025</p> -->
+          </aside>
+
+          <!-- Timeline -->
+          <div class="timeline reveal reveal--delay-1" aria-label="Education and achievements timeline">
+
+            <div class="timeline-item" data-year="2026">
+              <div class="timeline-dot" aria-hidden="true"></div>
+              <article class="glass-card timeline-card">
+                <span class="timeline-year">2026</span>
+                <h3>B.Tech in Computer Engineering
+                    Vidya Pratishthan's Kamalnayan Bajaj Institute of Engineering & Technology
+                    2024–2028</h3>
+                <!-- REPLACE: Your university -->
+                <p>Savitribai Phule Pune University, Maharashtra</p>
+                <p class="timeline-note">CGPA 9.36 / 10.0 </p>
+              </article>
+            </div>
+
+            <div class="timeline-item" data-year="2026">
+              <div class="timeline-dot" aria-hidden="true"></div>
+              <article class="glass-card timeline-card">
+                <span class="timeline-year">2026</span>
+                <h4>NPTEL Python for Data Science</h4>
+                <h5>Silver Medal • Score: 78%</h5>
+                <p>Successfully completed the NPTEL Python for Data Science course,securing a Silver Medal with an overall score of 78%.</p>
+              </article>
+            </div>
+
+            <div class="timeline-item" data-year="2024">
+              <div class="timeline-dot" aria-hidden="true"></div>
+              <article class="glass-card timeline-card">
+                <span class="timeline-year">2024</span>
+                <h3>Started Computer Engineering Degree</h3>
+                <!-- REPLACE: Your start date/institution -->
+                <p>Started pursuing a B.Tech degree in Computer with a focus on programming, web development, and artificial intelligence.</p>
+              </article>
+            </div>
+
+            <div class="timeline-item" data-year="2024">
+              <div class="timeline-dot" aria-hidden="true"></div>
+              <article class="glass-card timeline-card">
+                <span class="timeline-year">2024</span>
+                 <h4>Higher Secondary Certificate (HSC)</h4>
+                <h5>Completed with 88%</h5>
+                <p>Successfully completed Higher Secondary Education with an overall score of 88%, strengthening my foundation in science and mathematics.</p>
+              </article>
+            </div>
+
+            <div class="timeline-item" data-year="2022">
+              <div class="timeline-dot" aria-hidden="true"></div>
+              <article class="glass-card timeline-card">
+                <span class="timeline-year">2022</span>
+                <h4>Secondary School Certificate (SSC)</h4>
+                <h5>Completed with 92.80%</h5>
+              <p>Completed Secondary School Education with an outstanding score of 92.80%, demonstrating strong academic performance.</p>
+              </article>
+            </div>
+          </div><!-- /timeline -->
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         SECTION 6 — CONTACT
+         Form + info cards + social links
+         ============================================================ -->
+    <section class="section contact" id="contact" aria-label="Contact">
+      <div class="container">
+
+        <header class="section-header reveal">
+          <p class="section-label">Get in touch</p>
+          <h2 class="section-title">Contact <span class="accent">Me</span></h2>
+        </header>
+
+        <div class="contact-grid">
+
+          <!-- Contact info column -->
+          <div class="contact-info reveal">
+
+            <p class="contact-intro">
+              Have a project in mind or just want to say hi?
+              I'm always open to new opportunities and conversations.
+              Fill out the form or reach out via email — I'll get back to you within 24 hours.
+            </p>
+
+            <!-- Info cards -->
+            <div class="info-cards" role="list" aria-label="Contact information">
+
+              <div class="glass-card info-card" role="listitem">
+                <div class="info-card__icon" aria-hidden="true"><i class="ph ph-envelope-simple"></i></div>
+                <div>
+                  <p class="info-card__label">Email</p>
+                  <!-- REPLACE: Your email address -->
+                  <a href="mailto:priyankabhanvase3001@gmail.com" class="info-card__value">priyankabhanvase3001@gmail.com</a>
+                </div>
+              </div>
+
+              <div class="glass-card info-card" role="listitem">
+                <div class="info-card__icon" aria-hidden="true"><i class="ph ph-phone"></i></div>
+                <div>
+                  <p class="info-card__label">Phone</p>
+                  <!-- REPLACE: Your phone number -->
+                  <a href="9689307118" class="info-card__value">9689307118</a>
+                </div>
+              </div>
+
+              <div class="glass-card info-card" role="listitem">
+                <div class="info-card__icon" aria-hidden="true"><i class="ph ph-map-pin"></i></div>
+                <div>
+                  <p class="info-card__label">Location</p>
+                  <!-- REPLACE: Your city/country -->
+                  <span class="info-card__value">Baramati,Pune</span>
+                </div>
+              </div>
+
+            </div><!-- /info-cards -->
+
+            <!-- Social links -->
+            <div class="contact-socials" aria-label="Social media profiles">
+              <!-- REPLACE: All href values with your own profiles -->
+              <a href="https://github.com/priyankabhanvase3001"    target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+                <i class="ph ph-github-logo"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/priyanka-bhanvase-076608340"  target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+                <i class="ph ph-linkedin-logo"></i>
+              </a>
+              
+            </div>
+
+          </div><!-- /contact-info -->
+
+          <!-- Contact form -->
+          <form class="glass-card contact-form reveal reveal--delay-1" id="contactForm" action="https://formsubmit.co/priyankabhanvase3001@gmail.com" method="POST" aria-label="Send a message">
+
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text"  id="name"    name="name"    placeholder="Your full name"     autocomplete="name"  required />
+              <span class="form-error" role="alert" aria-live="polite" id="nameError"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email"   name="email"   placeholder="your@email.com"     autocomplete="email" required />
+              <span class="form-error" role="alert" aria-live="polite" id="emailError"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text"  id="subject" name="subject" placeholder="What's this about?" required />
+              <span class="form-error" role="alert" aria-live="polite" id="subjectError"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Tell me about your project or idea..." rows="5" required></textarea>
+              <span class="form-error" role="alert" aria-live="polite" id="messageError"></span>
+            </div>
+
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_subject" value="New Portfolio Contact">
+              
+
+            <button type="submit" class="btn btn--primary btn--full" id="submitBtn">
+              <i class="ph ph-paper-plane-tilt" aria-hidden="true"></i> Send Message
+            </button>
+
+            <!-- Form success message (shown by JS) -->
+            <div class="form-success" id="formSuccess" role="status" aria-live="polite" hidden>
+              <i class="ph ph-check-circle" aria-hidden="true"></i>
+              Message sent! I'll be in touch soon.
+            </div>
+
+          </form>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ============================================================
+       FOOTER
+       Copyright · Quick nav · Social links
+       ============================================================ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container footer-inner">
+
+      <div class="footer-brand">
+        <!-- REPLACE: Your initials and name -->
+        <span class="nav-brand" aria-label="Priyanka Bhanvase">PB<span class="brand-dot">.</span></span>
+        <!-- REPLACE: Your name in copyright -->
+        <p>&copy; <span id="footerYear"></span> Priyanka Bhanvase. All rights reserved.</p>
+      </div>
+
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#resume">Resume</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="footer-socials" aria-label="Social media links">
+        <!-- REPLACE: href values with your profiles -->
+        <a href="https://github.com/priyankabhanvase3001"    target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="ph ph-github-logo"></i></a>
+        <a href="https://www.linkedin.com/in/priyanka-bhanvase-076608340"  target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="ph ph-linkedin-logo"></i></a>
+        
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- Back-to-top button -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="ph ph-arrow-up" aria-hidden="true"></i>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
